@@ -1,0 +1,77 @@
+<h> Hello World </h>
+<p> //Project 1 
+//Written by Adara Blichfeldt
+
+
+public class ProjectOne {
+	
+	
+	public static void main(String[] args) {
+		//rectangle
+		rectangle1 RectOne = new rectangle1(5.7, 8.1);
+		System.out.printf("Rectangle with sides %f and %f has area of %f", + RectOne.width, RectOne.length, RectOne.computeAreaR());
+		
+		//circle
+		circle1 CircOne = new circle1(4);
+		System.out.printf("Circle with radius %f has area %f", + CircOne.radius, CircOne.computeAreaC());
+		
+	}
+}
+
+class rectangle1 {
+	double length;
+	double width;
+	
+	//setters and getters
+	public double getLength() {
+		return length;
+	}
+
+	public void setLength(double length) {
+		this.length = length;
+	}
+
+	public double getWidth() {
+		return width;
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	//constructor
+	public rectangle1(double length, double width) {
+		//super();
+		this.length = length;
+		this.width = width;
+	}
+
+	//method
+	public double computeAreaR() {
+		return length * width;
+	}
+}
+
+class circle1 {
+	double radius;
+	//double circArea;
+
+	public double getRadius() {
+		return radius;
+	}
+
+	public void setRadius(double radius) {
+		this.radius = radius;
+	}
+	
+	//constructor
+	public circle1(double radius) {
+		//super();
+		this.radius = radius;
+	}
+	
+	//method
+	public double computeAreaC() {
+		return (radius*radius)*3.14;
+	}
+} </p>
