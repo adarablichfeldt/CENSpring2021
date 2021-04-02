@@ -6,23 +6,55 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * 
+ * @author Adara
+ *
+ */
+
 public class Module2SDLC {
+	
+	/**
+	 * 
+	 * @param args
+	 * 
+	 */
+	
+	public int countall(String word){
+		/**
+		 * Method used for the tests, counts each instance of that letter.
+		 */
+    	int count = 0;
+    	for(int i = 0; i < word.length(); i++) {
+    		if(word.charAt(i)=='t' || word.charAt(i)=='T') {
+    			count++;
+    		}
+    	}
+    	return count;
+    }
 
 	public static void main(String[] args) throws Exception {
+		/**
+		 * Main method. Opens the file in read mode, 
+		 * gets each line till end of file is reached.
+		 * Splits each line into words and counts each word.
+		 * @see Exception
+		 * @throws Exception
+		 */
 		        String line;  
 		        int count = 0;  
 		          
 		        HashMap<String, Integer> map = new HashMap<>();
 		        
-		        //Opens a file in read mode  
+		          
 		        FileReader file = new FileReader("Raven.txt");  
 		        BufferedReader br = new BufferedReader(file);  
 		              
-		        //Gets each line till end of file is reached  
+		          
 		        while((line = br.readLine()) != null) {  
-		            //Splits each line into words  
+		             
 		            String words[] = line.split(" ");  
-		            //Counts each word  
+		            
 		            count = count + words.length; 
 		            
 		            for (String w : words) {
@@ -43,14 +75,10 @@ public class Module2SDLC {
 		            }
 		            
 		        }
-		            //
-		            //do a for loop until 20
-		            
-	                //map.forEach((w, n) -> { 
-	                
 		        
 		        
-		        System.out.println("Number of words present in given file: " + count);  
+		        
+		       System.out.println("Number of words present in given file: " + count);  
 		        
 		        
 		        
